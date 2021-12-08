@@ -1,0 +1,171 @@
+﻿@model BuyMeACoffeeInterface.Extras
+
+@{
+    ViewBag.Title = "GetExtras";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>My (Extra) transactions.</h2>
+
+<table class="table">
+    @if (Model.data != null)
+    {
+        <tr>
+            <th>
+                @Html.DisplayName("purchase_id")
+            </th>
+            <th>
+                @Html.DisplayName("purchased_on")
+            </th>
+            <th>
+                @Html.DisplayName("purchase_updated_on")
+            </th>
+            <th>
+                @Html.DisplayName("purchase_is_revoked")
+            </th>
+            <th>
+                @Html.DisplayName("purchase_amount")
+            </th>
+            <th>
+                @Html.DisplayName("purchase_currency")
+            </th>
+            <th>
+                @Html.DisplayName("purchase_question")
+            </th>
+            <th>
+                @Html.DisplayName("payer_email")
+            </th>
+            <th>
+                @Html.DisplayName("payer_name")
+            </th>
+            <th>
+                Reward Details
+            </th>
+            <th>
+                @Html.DisplayName("reward_id")
+            </th>
+            <th>
+                @Html.DisplayName("reward_title")
+            </th>
+            <th>
+                @Html.DisplayName("reward_description")
+            </th>
+            <th>
+                @Html.DisplayName("reward_confirmation_message")
+            </th>
+            <th>
+                @Html.DisplayName("reward_question")
+            </th>
+            <th>
+                @Html.DisplayName("reward_used")
+            </th>
+            <th>
+                @Html.DisplayName("reward_created_on")
+            </th>
+            <th>
+                @Html.DisplayName("reward_updated_on")
+            </th>
+            <th>
+                @Html.DisplayName("reward_deleted_on")
+            </th>
+            <th>
+                @Html.DisplayName("reward_is_active")
+            </th>
+            <th>
+                @Html.DisplayName("reward_image")
+            </th>
+            <th>
+                @Html.DisplayName("reward_slots")
+            </th>
+            <th>
+                @Html.DisplayName("reward_coffee_price")
+            </th>
+            <th>
+                @Html.DisplayName("reward_order")
+            </th>
+        </tr>
+
+        foreach (var item in Model.data)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.purchase_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.purchased_on)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.purchase_updated_on)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.purchase_is_revoked)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.purchase_amount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.purchase_currency)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.purchase_question)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.payer_email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.payer_name)
+                </td>
+                <td>
+                    Reward Details
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.data.reward_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.data.reward_title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.data.reward_description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.data.reward_confirmation_message)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.data.reward_question)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.data.reward_used)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.data.reward_created_on)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.data.reward_updated_on)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.data.reward_deleted_on)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.data.reward_is_active)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.data.reward_image)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.data.reward_slots)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.data.reward_coffee_price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.data.reward_order)
+                </td>
+            </tr>
+        }
+
+    }
+    else
+    {
+        <text>Sorry no current valid transactions found!</text>
+    }
+</table>

@@ -1,0 +1,98 @@
+﻿@model BuyMeACoffeeInterface.ExtrasById
+
+@{
+    ViewBag.Title = "GetExtrasById";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>My (Extra) transactions by id.</h2>
+
+<div>
+    <h4>Extra transactions by id</h4>
+    <hr />
+    @if (Model != null)
+    {
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.purchase_id)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.purchase_id)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.purchased_on)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.purchased_on)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.purchase_updated_on)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.purchase_updated_on)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.purchase_is_revoked)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.purchase_is_revoked)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.purchase_amount)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.purchase_amount)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.purchase_currency)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.purchase_currency)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.purchase_question)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.purchase_question)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.payer_email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.payer_email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.payer_name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.payer_name)
+            </dd>
+
+        </dl>
+    }
+    else
+    {
+        <text>Sorry no current valid transactions found!</text>
+    }
+
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

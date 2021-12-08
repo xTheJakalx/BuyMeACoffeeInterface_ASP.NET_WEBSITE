@@ -1,0 +1,145 @@
+﻿@model BuyMeACoffeeInterface.Members
+
+@{
+    ViewBag.Title = "GetSubs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>My Subscribers</h2>
+
+<table class="table">
+    @if (Model.data != null)
+    {
+        <tr>
+            <th>
+                @Html.DisplayName("Sub_ID")
+            </th>
+            <th>
+                @Html.DisplayName("Cancelled Date")
+            </th>
+            <th>
+                @Html.DisplayName("Created Date")
+            </th>
+            <th>
+                @Html.DisplayName("Updated Date")
+            </th>
+            <th>
+                @Html.DisplayName("Current Start")
+            </th>
+            <th>
+                @Html.DisplayName("Current End")
+            </th>
+            <th>
+                @Html.DisplayName("Total Price")
+            </th>
+            <th>
+                @Html.DisplayName("Total Amount")
+            </th>
+            <th>
+                @Html.DisplayName("Sub Is Cancelled")
+            </th>
+            <th>
+                @Html.DisplayName("Sub Is Cancelled at End")
+            </th>
+            <th>
+                @Html.DisplayName("Sub Currency")
+            </th>
+            <th>
+                @Html.DisplayName("Sub Message")
+            </th>
+            <th>
+                @Html.DisplayName("Message Visibility")
+            </th>
+            <th>
+                @Html.DisplayName("Duration Type")
+            </th>
+            <th>
+                @Html.DisplayName("Referer")
+            </th>
+            <th>
+                @Html.DisplayName("Country")
+            </th>
+            <th>
+                @Html.DisplayName("Transaction Id")
+            </th>
+            <th>
+                @Html.DisplayName("Payer Email")
+            </th>
+            <th>
+                @Html.DisplayName("Payer Name")
+            </th>
+            <th>
+                @Html.DisplayName("")
+            </th>
+            <th></th>
+        </tr>
+
+        foreach (var item in Model.data)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.subscription_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.subscription_cancelled_on)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.subscription_created_on)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.subscription_updated_on)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.subscription_current_period_start)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.subscription_current_period_end)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.subscription_coffee_price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.subscription_coffee_num)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.subscription_is_cancelled)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.subscription_is_cancelled_at_period_end)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.subscription_currency)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.subscription_message)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.message_visibility)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.subscription_duration_type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.referer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.country)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.transaction_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.payer_email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.payer_name)
+                </td>
+            </tr>
+        }
+    }
+    else
+    {
+        <text>Sorry no current valid members found!</text>
+    }
+
+</table>

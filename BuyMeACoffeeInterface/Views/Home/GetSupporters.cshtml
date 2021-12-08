@@ -1,0 +1,141 @@
+﻿@model BuyMeACoffeeInterface.Supporters
+
+@{
+    ViewBag.Title = "GetSupporters";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>My Supporters</h2>
+
+<table class="table">
+    @if (Model.data != null)
+    {
+        <tr>
+            <th>
+                @Html.DisplayName("support_id")
+            </th>
+            <th>
+                @Html.DisplayName("support_note")
+            </th>
+            <th>
+                @Html.DisplayName("support_coffees")
+            </th>
+            <th>
+                @Html.DisplayName("transaction_id")
+            </th>
+            <th>
+                @Html.DisplayName("support_visibility")
+            </th>
+            <th>
+                @Html.DisplayName("support_created_on")
+            </th>
+            <th>
+                @Html.DisplayName("support_updated_on")
+            </th>
+            <th>
+                @Html.DisplayName("transfer_id")
+            </th>
+            <th>
+                @Html.DisplayName("supporter_name")
+            </th>
+            <th>
+                @Html.DisplayName("support_coffee_price")
+            </th>
+            <th>
+                @Html.DisplayName("support_email")
+            </th>
+            <th>
+                @Html.DisplayName("is_refunded")
+            </th>
+            <th>
+                @Html.DisplayName("support_currency")
+            </th>
+            <th>
+                @Html.DisplayName("support_note_pinned")
+            </th>
+            <th>
+                @Html.DisplayName("referer")
+            </th>
+            <th>
+                @Html.DisplayName("country")
+            </th>
+            <th>
+                @Html.DisplayName("payer_email")
+            </th>
+            <th>
+                @Html.DisplayName("payment_platform")
+            </th>
+            <th>
+                @Html.DisplayName("payer_name")
+            </th>
+            <th></th>
+        </tr>
+
+        foreach (var item in Model.data)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.support_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.support_note)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.support_coffees)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.transaction_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.support_visibility)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.support_created_on)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.support_updated_on)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.transfer_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.supporter_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.support_coffee_price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.support_email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.is_refunded)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.support_currency)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.support_note_pinned)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.referer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.country)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.payer_email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.payment_platform)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.payer_name)
+                </td>
+            </tr>
+        }
+    }
+    else
+    {
+        <text>Sorry no current valid supporters found!</text>
+    }
+</table>

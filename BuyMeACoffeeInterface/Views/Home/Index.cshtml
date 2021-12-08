@@ -1,0 +1,127 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Buy me a coffee API</h1>
+    <p class="lead">Here are some Asp.Net MVC 5 examples for getting your user details by using their api, currently the API is read-only and will eventually change but these examples will still work and just need minor changes for POST/PUT/DELETE actions when they become available.</p>
+    <p>The pages that are loaded are only examples of what you could do and are only examples, do with your data as you see fit!</p>
+    <p>If you find this code useful please think about buying me a beer for my efforts! :D</p>
+    <a href="https://www.buymeacoffee.com/TheJakal" target="_blank"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a beer&emoji=🍺&slug=TheJakal&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"></a>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Subscribers</h2>
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-10">
+                    @{ using (Html.BeginForm("GetSubs", "Home", FormMethod.Get, new { @class = "form-horizontal", role = "form" }))
+                        {
+                            <center>
+                                Get all active Subscribers
+                                <button class="btn btn-success form-control" type="submit">Go</button>
+                                <br />
+                            </center>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-10">
+                    @{ using (Html.BeginForm("GetSubsById", "Home", FormMethod.Get, new { @class = "form-horizontal", role = "form" }))
+                        {
+                            <center>
+                                You can get the Id from the above button!
+                                <p>
+                                    Get a subscriber by id.
+                                    @Html.TextBox("id", null, new { style = "width:90px", @type = "number", @Value = 0 })
+                                </p>
+                                <button class="btn btn-success form-control" type="submit">Go</button>
+                            </center>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <h2>Supporters</h2>
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-10">
+                    @{ using (Html.BeginForm("GetSupporters", "Home", FormMethod.Get, new { @class = "form-horizontal", role = "form" }))
+                        {
+                            <center>
+                                Get all supporters.
+                                <button class="btn btn-success form-control" type="submit">Go</button>
+                                <br />
+                            </center>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-10">
+                    @{ using (Html.BeginForm("GetSupportersById", "Home", FormMethod.Get, new { @class = "form-horizontal", role = "form" }))
+                        {
+                            <center>
+                                You can get the Id from the above button!
+                                <p>
+                                    Get a supporter by id.
+                                    @Html.TextBox("id", null, new { style = "width:90px", @type = "number", @Value = 0 })
+                                </p>
+                                <button class="btn btn-success form-control" type="submit">Go</button>
+                            </center>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <h2>Extra Transactions</h2>
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-10">
+                    @{ using (Html.BeginForm("GetExtras", "Home", FormMethod.Get, new { @class = "form-horizontal", role = "form" }))
+                        {
+                            <center>
+                                Get all (extra) transactions.
+                                <button class="btn btn-success form-control" type="submit">Go</button>
+                                <br />
+                            </center>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-10">
+                    @{ using (Html.BeginForm("GetExtrasById", "Home", FormMethod.Get, new { @class = "form-horizontal", role = "form" }))
+                        {
+                            <center>
+                                You can get the Id from the above button!
+                                <p>
+                                    Get an (extra) transaction by id.
+                                    @Html.TextBox("id", null, new { style = "width:90px", @type = "number", @Value = 0 })
+                                </p>
+                                <button class="btn btn-success form-control" type="submit">Go</button>
+                            </center>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

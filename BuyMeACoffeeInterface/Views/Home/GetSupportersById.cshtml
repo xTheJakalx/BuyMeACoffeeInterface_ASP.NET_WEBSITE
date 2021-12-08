@@ -1,0 +1,146 @@
+﻿@model BuyMeACoffeeInterface.Supporter
+
+@{
+    ViewBag.Title = "GetSupportersById";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetSupportersById</h2>
+
+<div>
+    <h4>Supporter</h4>
+    <hr />
+    @if (Model != null)
+    {
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.support_id)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.support_id)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.support_coffees)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.support_coffees)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.transaction_id)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.transaction_id)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.support_visibility)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.support_visibility)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.support_created_on)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.support_created_on)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.support_updated_on)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.support_updated_on)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.support_coffee_price)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.support_coffee_price)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.support_email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.support_email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.support_currency)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.support_currency)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.support_note)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.support_note)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.support_note_pinned)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.support_note_pinned)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.country)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.country)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.payer_email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.payer_email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.payment_platform)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.payment_platform)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.payer_name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.payer_name)
+            </dd>
+
+        </dl>
+    }
+    else
+    {
+        <text>Sorry no current valid supporters found!</text>
+    }
+
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

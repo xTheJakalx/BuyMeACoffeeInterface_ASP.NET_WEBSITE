@@ -1,0 +1,130 @@
+﻿@model BuyMeACoffeeInterface.Member
+
+@{
+    ViewBag.Title = "GetSubsById";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetSubsById</h2>
+
+<div>
+    <h4>Member</h4>
+    <hr />
+    @if (Model != null)
+    {
+        <dl class="dl-horizontal">
+            <dt style="width: 25%;padding-right: 10px;">
+                @Html.DisplayNameFor(model => model.subscription_id)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.subscription_id)
+            </dd>
+
+            <dt style="width: 25%;padding-right: 10px;">
+                @Html.DisplayNameFor(model => model.subscription_created_on)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.subscription_created_on)
+            </dd>
+
+            <dt style="width: 25%;padding-right: 10px;">
+                @Html.DisplayNameFor(model => model.subscription_updated_on)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.subscription_updated_on)
+            </dd>
+
+            <dt style="width: 25%;padding-right: 10px;">
+                @Html.DisplayNameFor(model => model.subscription_current_period_start)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.subscription_current_period_start)
+            </dd>
+
+            <dt style="width: 25%;padding-right: 10px;">
+                @Html.DisplayNameFor(model => model.subscription_current_period_end)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.subscription_current_period_end)
+            </dd>
+
+            <dt style="width: 25%;padding-right: 10px;">
+                @Html.DisplayNameFor(model => model.subscription_coffee_price)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.subscription_coffee_price)
+            </dd>
+
+            <dt style="width: 25%;padding-right: 10px;">
+                @Html.DisplayNameFor(model => model.subscription_coffee_num)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.subscription_coffee_num)
+            </dd>
+
+            <dt style="width: 25%;padding-right: 10px;">
+                @Html.DisplayNameFor(model => model.subscription_currency)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.subscription_currency)
+            </dd>
+
+            <dt style="width: 25%;padding-right: 10px;">
+                @Html.DisplayNameFor(model => model.message_visibility)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.message_visibility)
+            </dd>
+
+            <dt style="width: 25%;padding-right: 10px;">
+                @Html.DisplayNameFor(model => model.subscription_duration_type)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.subscription_duration_type)
+            </dd>
+
+            <dt style="width: 25%;padding-right: 10px;">
+                @Html.DisplayNameFor(model => model.transaction_id)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.transaction_id)
+            </dd>
+
+            <dt style="width: 25%;padding-right: 10px;">
+                @Html.DisplayNameFor(model => model.payer_email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.payer_email)
+            </dd>
+
+            <dt style="width: 25%;padding-right: 10px;">
+                @Html.DisplayNameFor(model => model.payer_name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.payer_name)
+            </dd>
+
+        </dl>
+    }
+    else
+    {
+        <text>Sorry no current valid members found!</text>
+    }
+
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
